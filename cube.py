@@ -151,7 +151,9 @@ class Cube:
                 if not is_buffer_cycle or not is_current_sticker_on_buffer_piece:
                     current_cycle.append(current_sticker)
 
-            edge_cycles.append(current_cycle)
+            is_solved_cycle = len(current_cycle) == 2 and current_cycle[0] == current_cycle[1]
+            if len(current_cycle) and not is_solved_cycle:
+                edge_cycles.append(current_cycle)
             if is_buffer_cycle:
                 is_buffer_cycle = False
 
@@ -192,7 +194,9 @@ class Cube:
                 if not is_buffer_cycle or not is_current_sticker_on_buffer_piece:
                     current_cycle.append(current_sticker)
 
-            corner_cycles.append(current_cycle)
+            is_solved_cycle = len(current_cycle) == 2 and current_cycle[0] == current_cycle[1]
+            if len(current_cycle) and not is_solved_cycle:
+                corner_cycles.append(current_cycle)
             if is_buffer_cycle:
                 is_buffer_cycle = False
 
