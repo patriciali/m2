@@ -3,10 +3,10 @@ import utils
 
 ##################################################
 scramble = '''
-L2 B2 R2 F' L2 F2 U2 L2 F2 L' F D' F2 L' U' R U' R2
+F2 U F R L' B' L2 F L B' D2 F2 U' F2 D R2 D2 L2 D' L2
 '''
-hint_edge_cycle_starts_list = 'OB'
-hint_corner_cycle_starts_list = 'HCG'
+hint_edge_cycle_starts_list = 'OAD'
+hint_corner_cycle_starts_list = 'DJ'
 ##################################################
 
 scramble_arr = scramble.strip().split(' ')

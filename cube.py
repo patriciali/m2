@@ -143,7 +143,7 @@ class Cube:
                 if current_sticker in hint_cycle_starts:
                     hint_cycle_starts.remove(current_sticker)
                 if current_sticker_buddy in hint_cycle_starts:
-                    hint_cycle_starts.remone(current_sticker_buddy)
+                    hint_cycle_starts.remove(current_sticker_buddy)
 
                 current_sticker = self.edges[current_sticker]
                 is_current_sticker_on_buffer_piece = current_sticker == EDGE_BUFFER_STICKER_INDEX or \
@@ -186,7 +186,7 @@ class Cube:
                     hint_cycle_starts.remove(current_sticker)
                 for buddy_index in current_sticker_buddy_indices:
                     if buddy_index in hint_cycle_starts:
-                        hint_cycle_starts.remone(buddy_index)
+                        hint_cycle_starts.remove(buddy_index)
 
                 current_sticker = self.corners[current_sticker]
                 is_current_sticker_on_buffer_piece = current_sticker == CORNER_BUFFER_STICKER_INDEX or \
